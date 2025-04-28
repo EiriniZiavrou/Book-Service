@@ -1,0 +1,206 @@
+html, body{
+    height: 100%;
+    min-width: 300px;
+    min-height: 400px;
+}
+
+.bookList{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: left;
+    margin: 25px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.bookList > * {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+}
+
+.searchInput{
+    width: 95%;
+    height: 25px;
+    background-color: #eeeeee;
+    padding: 0px;
+    border: none;
+    outline: none;
+}
+
+.searchButton{
+    min-width: 60px;
+    height: 25px;
+    background-color: #1eaf98;
+    margin: 0px 5px;
+    color: white;
+    border: none;
+    outline: none;
+    flex: 0 0 auto;
+}
+
+.addButton{
+    width: 8%;
+    min-width: 70px;
+    height: 25px;
+    background-color: #1eaf98;
+    padding: 0px 5px;
+    color: white;
+    border: none;
+    outline: none;
+
+}
+
+.justTheBooksListText{
+    color: rgb(0, 139, 125);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+.clearButton{
+    background-color: #eeeeee;
+    height: 25px;
+    border: none;
+    padding: 5px;
+    width: 5%;
+    transition: filter 0.3s ease;
+}
+
+.clearButton:hover{
+    cursor: pointer;
+    filter: brightness(1.03);
+}
+
+.searchBar{
+    width: 100%;
+}
+
+.searchBox{
+    align-items: baseline;
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: sp; */
+    gap: 0px;
+}
+
+#topRightButton{
+    width: 130px;
+    height: 25px;
+    padding: 0px;
+    border: none;
+    margin: 0px 5px;
+    transition: filter 0.3s ease;
+}
+
+#topRightButton:hover{
+    cursor: pointer;
+    filter: brightness(1.03);
+}
+
+.textAndAdd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.topPart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.scrollBar{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.scrollButton{
+    background-color: none;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: large;
+    transition: font-size 0.1s ease;
+}
+
+.scrollButton:hover{
+    cursor: pointer;
+    font-size: x-large;
+}
+
+#dialogBox{
+    border: 2px solid #bbbbbb;
+    border-radius: 5px;
+}
+
+.dialogBoxContent{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+    height: 275px;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.fieldNames{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.fieldValues{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.fields{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+.fieldInput{
+    border: none;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    height: 40px;
+}
+
+.closeDialogButton{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #00ca9b;
+    transition: filter 0.3s ease;
+}
+
+.closeDialogButton:hover{
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.addBookText{
+    display: flex;
+    margin: 0px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

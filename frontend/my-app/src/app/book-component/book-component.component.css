@@ -1,0 +1,158 @@
+.bookBox {
+    display: flex;
+    padding: 10px;
+    width: 300px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eeeeee;
+    border-radius: 15px;
+}
+
+.bookIcon {
+    width: 200px;
+    height: 200px;
+}
+
+.bookImage {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+}
+
+.detailsAndButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.bookDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    row-gap: 5px;
+    width: 60%;
+}
+
+.bookDetails .title,
+.bookDetails .author,
+.bookDetails .ISBN {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* display: block; */
+    width: 100%;
+}
+
+.actionButton {
+    width: auto;
+    height: 30px;
+    border: none;
+    margin: 5px;
+    transition: filter 0.3s ease;
+}
+
+.actionButton:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+
+#edit {
+    background-color: #008cff;
+    color: white;
+}
+
+#delete {
+    background-color: #ff0000;
+    color: white;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.author {
+    font-style: italic;
+}
+
+.dialogEditBox{
+    border: 2px solid #bbbbbb;
+    border-radius: 5px;
+}
+
+.dialogEditBoxContent {
+    height: 200px;
+    width: 300px;
+    border: 2px solid #bbbbbb;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    gap: 15px;
+}
+
+.fields{
+    display: flex;
+    flex-direction: row;
+}
+
+.editCategory {
+    display: flex;
+    margin: 0px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: auto;
+}
+
+#fieldNames{
+    width: 20%;
+}
+
+#fieldInputs{
+    width: 80%;
+}
+
+.saveChanges {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #00ca9b;
+    transition: filter 0.3s ease;
+}
+
+.saveChanges:hover{
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.editBookText{
+    padding: 10px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.inputField{
+    border: none;
+    background-color: #eeeeee;
+    height: 30px;
+    
+}

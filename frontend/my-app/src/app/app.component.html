@@ -1,0 +1,49 @@
+<div class="topPart">
+    <div class ="searchBox">
+        <div class="searchBar">
+            <input class="searchInput" type="text" placeholder="Enter ISBN" #filter />
+            <button class="clearButton" (click)="clearInput(filter)">X</button>
+        </div>
+        <button class="searchButton" id="topRightButton" (click)="searchFor(filter.value)">Search</button>
+    </div>
+
+    <div class="textAndAdd">
+        <p class="justTheBooksListText">Books List</p>
+        <button class="addButton" id="topRightButton" (click)="openDialog('dialogBox')">Add new</button>
+    </div>
+
+    <div class="scrollBar">
+        <p>Total Books: {{total}}</p>
+        <button class="scrollButton" (click)="scrollLeft()"><</button>
+        <button class="scrollButton" (click)="scrollRight()">></button>
+    </div>
+</div>
+
+<span>
+    <dialog id="dialogBox">
+        <div class="dialogBoxContent">
+            <p class="addBookText"> Add a book </p>
+            <div class="fields">
+                <div class="fieldNames">
+                    <p class="category">Enter Title: </p>
+                    <p class="category">Enter Author: </p>
+                    <p class="category">Enter ISBN: </p>
+                </div>
+                <div class="fieldValues">
+                    <input class="fieldInput" type="text" placeholder="Enter book title" #title>
+                    <input class="fieldInput" type="text" placeholder="Enter book author" #author>
+                    <input class="fieldInput" type="text" placeholder="Enter book ISBN" #isbn>
+                </div>
+            </div>
+            <button class="closeDialogButton" (click)="addBook(title.value,author.value,isbn.value); closeDialog('dialogBox')">Submit</button>
+        </div>
+    </dialog>
+
+    <span class="dialog">
+        <ng-container #dialogContainer></ng-container>
+    </span>
+
+    <div class="bookList" #bookScrollableContainer>
+        <ng-container #bookViewerContainer class="bookList"></ng-container>
+    </div>
+</span>

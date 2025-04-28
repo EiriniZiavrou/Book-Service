@@ -1,0 +1,36 @@
+<span class="bookBox">
+
+    <dialog class ="dialogEditBox" id="dialogEditBox{{ISBN}}">
+        <div class="dialogEditBoxContent">
+            <p class="editBookText">Edit Book</p>
+            <div class="fields">
+                <div class="category" id="fieldNames">
+                    <p class="editCategory">Title: </p>
+                    <p class="editCategory">Author: </p>
+                </div>
+                <div class="category" id="fieldInputs">
+                    <input class="inputField" type="text" value={{title}} placeholder="Enter book title" #newTitle>
+                    <input class="inputField" type="text" value={{author}} placeholder="Enter book author" #newAuthor>
+                </div>
+            </div>
+            <button class="saveChanges" (click)="editBook(newTitle.value,newAuthor.value); closeEditDialog()">Save Changes</button>
+        </div>
+    </dialog>
+
+    <div class="bookImage">
+        <img class="bookIcon" src="assets/BookImage.png">
+    </div>
+    <div class="detailsAndButtons">
+        <div class="bookDetails">
+            <div class="title">{{ title }}</div>
+            <div class="author">by: {{ author }}</div>
+            <div class="ISBN">{{ ISBN }}</div>
+        </div>
+        
+        <div class="buttons">
+            <button class="actionButton" id="edit" (click)="openEditDialog()">Edit</button>
+            <button class="actionButton" id="delete" (click)="deleteBook()">Delete</button>
+        </div>
+    </div>
+</span>
+
